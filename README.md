@@ -69,6 +69,23 @@ Want the engineering deep-dive? Read
 plane" — and its companion piece, *TBIE in Practice: Designing Resilient AI
 Pipelines That Recover, Reconcile, and Re-run*.
 
+## Roadmap
+
+Where the platform is heading — tracked as issues labelled
+[`roadmap`](../../issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap) so you can
+follow, vote (👍), and comment:
+
+- **[Fair-share dispatcher — control-plane scheduling](../../issues/10)** —
+  guaranteed per-tenant throughput shares, batch pause/resume, priorities,
+  and accurate batch ETAs. *(Shipped precursor, 2026-07: per-tenant fair
+  scheduling — one tenant's bulk batch can no longer starve another tenant's
+  fresh upload.)*
+- **[Near-duplicate detection, burst-aware](../../issues/4)**
+- **[Personalized curation from your overrides](../../issues/5)**
+- **[Composition-aware enrichment](../../issues/6)**
+- **[In-app notifications](../../issues/8)**
+- **[Self-serve payments](../../issues/9)**
+
 ## R&D and behind-the-scenes
 
 The [Phagyul AI Systems blog](https://blog.phagyul.ai) covers the research,
