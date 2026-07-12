@@ -1,10 +1,77 @@
 # Parjanya — Issue Tracker
 
-Public issue tracker for **Parjanya 2.0**, the AI-assisted photography curation platform.
+Welcome! This is the public home for **Parjanya 2.0** — the AI-assisted
+photography curation platform by [Phagyul AI Systems](https://blog.phagyul.ai) —
+where you can report bugs, request features, follow known issues, and read
+release notes.
 
 - 🐛 **Found a bug?** [Open a bug report](../../issues/new?template=bug_report.yml)
 - 💡 **Have an idea?** [Request a feature](../../issues/new?template=feature_request.yml)
 - 📋 **Known issues** are labelled [`known-issue`](../../issues?q=is%3Aissue+is%3Aopen+label%3Aknown-issue)
+- 📦 **Release notes** live under [Releases](../../releases)
 
-Please search existing issues before filing a new one. Do not include account
+Please search existing issues before filing a new one. Don't include account
 credentials or personal data in reports — screenshots of the UI are fine.
+
+---
+
+## What happens to your photos
+
+Parjanya is built for working photographers who come back from a shoot with
+thousands of frames. Here's the journey every image takes:
+
+```
+ 1. Upload      Your RAW/JPEG files (34 formats, up to 500MB each) go straight
+                to secure cloud storage — resilient to network drops and pauses.
+ 2. Extract     Camera metadata (EXIF) is read and fast web previews are
+                generated, so your gallery is browsable within moments.
+ 3. Screen      A technical pass catches exact duplicate re-uploads and groups
+                rapid-sequence (burst) shots so near-identical frames don't
+                flood your gallery.
+ 4. Enrich      A vision AI studies each image — distortion types (blur, noise,
+                exposure issues) with severity, plus rich descriptions that
+                power search.
+ 5. Verdict     A rule engine turns that analysis into Accept / Review /
+                Reject — based on what's wrong and how badly, never an opaque
+                score.
+ 6. You decide  Override any verdict with one click. Your corrections are
+                remembered and will personalise future curation to your taste.
+```
+
+You can watch costs and storage for all of this on the in-app **Usage &
+Costs** dashboard.
+
+## Why your batch never silently stalls
+
+Behind the scenes, Parjanya treats reliability as a first-class feature. The
+platform is designed around the **TBIE model** — **Truth, Belief, Intent,
+Execution**:
+
+- **Truth** — the durable record of your images and where each one is in its
+  journey. It survives any crash.
+- **Belief** — what the system *thinks* is happening right now (queue depths,
+  worker health). Useful, but never blindly trusted.
+- **Intent** — a durable declaration of what should happen next to each image.
+- **Execution** — the disposable machinery (serverless functions, GPU workers)
+  that does the work, built so it can be safely restarted and re-run.
+
+A **reconciliation loop** continuously compares Truth against Intent: if any
+image's journey stalls at any stage — a transient failure, a lost message, a
+worker interruption — the divergence is detected and that exact step is
+automatically replayed. Intermittent failures self-heal; genuine errors are
+caught, bounded, and surfaced rather than retried forever. In our 450GB /
+12,000-image validation run, this loop repaired thousands of stalled records
+with zero manual intervention.
+
+Want the engineering deep-dive? Read
+[**From Pipeline to Platform**](https://blog.phagyul.ai/p/from-pipeline-to-platform)
+— how the replay engine "stopped being a utility [and] became the control
+plane" — and its companion piece, *TBIE in Practice: Designing Resilient AI
+Pipelines That Recover, Reconcile, and Re-run*.
+
+## R&D and behind-the-scenes
+
+The [Phagyul AI Systems blog](https://blog.phagyul.ai) covers the research,
+field notes, and behind-the-scenes engineering of our products — Parjanya
+v2.0, WilderhoodTV, and Smriti LLM. If you want to know *why* the platform
+works the way it does, that's the place.
