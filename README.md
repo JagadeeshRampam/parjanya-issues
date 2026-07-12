@@ -83,6 +83,9 @@ follow, vote (👍), and comment:
 - **[Deduplication](../../issues/4)** — exact-duplicate detection is live;
   near-duplicate matching (burst-aware, review-first) is next — the issue
   tracks implementation status and history
+- **[Semantic search](../../issues/11)** — keyword search over AI
+  descriptions works today; true meaning-based search (embeddings) is
+  planned — the issue has the fix plan and current status
 - **[Personalized curation from your overrides](../../issues/5)**
 - **[Composition-aware enrichment](../../issues/6)**
 - **[In-app notifications](../../issues/8)**
