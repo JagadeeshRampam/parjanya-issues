@@ -80,7 +80,9 @@ follow, vote (👍), and comment:
   and accurate batch ETAs. *(Shipped precursor, 2026-07: per-tenant fair
   scheduling — one tenant's bulk batch can no longer starve another tenant's
   fresh upload.)*
-- **[Near-duplicate detection, burst-aware](../../issues/4)**
+- **[Deduplication](../../issues/4)** — exact-duplicate detection is live;
+  near-duplicate matching (burst-aware, review-first) is next — the issue
+  tracks implementation status and history
 - **[Personalized curation from your overrides](../../issues/5)**
 - **[Composition-aware enrichment](../../issues/6)**
 - **[In-app notifications](../../issues/8)**
