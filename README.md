@@ -91,6 +91,16 @@ follow, vote (👍), and comment:
 - **[In-app notifications](../../issues/8)**
 - **[Self-serve payments](../../issues/9)**
 
+## What we're working on now
+
+Work is grouped into sprint milestones. Follow along, or filter any list by milestone:
+
+- [**Sprint 1: Ship and close**](../../milestone/1): ship what is built, confirm fixes that are waiting on a live event, settle open decisions
+- [**Sprint 2: Correctness and customer-visible gaps**](../../milestone/2): search, upload edge cases, burst and duplicate handling, notifications
+- [**Sprint 3: Cost and performance**](../../milestone/3): storage and request volume, GPU cold start, caching
+
+The carry-over list behind these is [#133](../../issues/133). Open problems we know about stay under [`known-issue`](../../issues?q=is%3Aissue+is%3Aopen+label%3Aknown-issue); each shows a status label (`planned`, `in progress`, `verifying`, `waiting`) that moves as the work does.
+
 ## R&D and behind-the-scenes
 
 The [Phagyul AI Systems blog](https://blog.phagyul.ai) covers the research,
