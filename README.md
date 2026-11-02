@@ -8,7 +8,7 @@ release notes.
 - 🐛 **Found a bug?** [Open a bug report](../../issues/new?template=bug_report.yml)
 - 💡 **Have an idea?** [Request a feature](../../issues/new?template=feature_request.yml)
 - 📋 **Known issues** are labelled [`known-issue`](../../issues?q=is%3Aissue+is%3Aopen+label%3Aknown-issue)
-- 📦 **Release notes** live under [Releases](../../releases)
+- 📦 **Release notes** live under [Releases](../../releases); Grove's are tagged `grove-v…`
 
 Please search existing issues before filing a new one. Don't include account
 credentials or personal data in reports — screenshots of the UI are fine.
@@ -75,6 +75,8 @@ Where the platform is heading — tracked as issues labelled
 [`roadmap`](../../issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap) so you can
 follow, vote (👍), and comment:
 
+### Parjanya 2.0
+
 - **[Fair-share dispatcher — control-plane scheduling](../../issues/10)** —
   guaranteed per-tenant throughput shares, batch pause/resume, priorities,
   and accurate batch ETAs. *(Shipped precursor, 2026-07: per-tenant fair
@@ -90,6 +92,22 @@ follow, vote (👍), and comment:
 - **[Composition-aware enrichment](../../issues/6)**
 - **[In-app notifications](../../issues/8)**
 - **[Self-serve payments](../../issues/9)**
+
+### Grove, our agent platform
+
+Grove is Parjanya's platform for running AI agents under control: every run
+has a deadline and a written record, and a person reviews what it makes before
+anything goes out. It has its own version numbers, separate from Parjanya's,
+and its releases change nothing in the app.
+
+- **[Grove roadmap](../../issues/151)**: the state of each part
+  (the harness, the research agent, hosted models, evaluations, the coding
+  agent) and what comes next
+- **Current release:** [Grove 0.1.0](../../releases/tag/grove-v0.1.0)
+  (2 November 2026), the agent harness, first notes. The engineering notes:
+  [Building Grove v0.1](https://blog.phagyul.ai/p/building-grove-v01-the-agent-harness)
+- **Next:** a first live run on a hosted model, confirmed answers for the
+  evaluations, and a first real job for the coding agent
 
 ## What we're working on now
 
